@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ari Anggara | Portfolio Waiter & Helper Restaurant</title>
+    <meta
+      name="description"
+      content="Portfolio waiter dan helper restaurant Ari Anggara, berdasarkan pengalaman kerja sebelumnya di Ayam Loncat."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.164.1/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="preloader" id="preloader" aria-label="Memuat portfolio">
+      <div class="preloader__mark">
+        <span class="preloader__plate"></span>
+        <span class="preloader__steam preloader__steam--one"></span>
+        <span class="preloader__steam preloader__steam--two"></span>
+        <span class="preloader__steam preloader__steam--three"></span>
+      </div>
+      <p>Ari Anggara</p>
+      <div class="preloader__bar" aria-hidden="true">
+        <span id="loadBar"></span>
+      </div>
+    </div>
+
+    <canvas id="threeScene" class="three-scene" aria-hidden="true"></canvas>
+    <canvas id="flavorCanvas" class="flavor-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-lockup" href="#hero" aria-label="Kembali ke awal">
+        <span class="brand-lockup__icon">AA</span>
+        <span>
+          <strong>Ari Anggara</strong>
+          <small>Waiter / Helper</small>
+        </span>
+      </a>
+
+      <nav class="section-dots" aria-label="Navigasi portfolio">
+        <button class="section-dots__dot is-active" data-target="hero" aria-label="Hero"></button>
+        <button class="section-dots__dot" data-target="profile" aria-label="Profil"></button>
+        <button class="section-dots__dot" data-target="skills" aria-label="Skill"></button>
+        <button class="section-dots__dot" data-target="rhythm" aria-label="Ritme kerja"></button>
+        <button class="section-dots__dot" data-target="motion" aria-label="Aksi 3D"></button>
+        <button class="section-dots__dot" data-target="contact" aria-label="Kontak"></button>
+      </nav>
+    </header>
+
+    <main class="snap-shell" id="snapShell">
+      <section class="snap-section hero-section" id="hero" data-theme="hero">
+        <img
+          class="hero-photo"
+          src="assets/arianggara-restaurant-hero.png"
+          alt="Ari Anggara membawa hidangan di area service restoran"
+        />
+        <div class="section-inner hero-layout">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Portfolio Waiter & Helper Restaurant</p>
+            <h1>Ari Anggara</h1>
+            <p class="hero-role">
+              <span id="roleRotator">Waiter cekatan</span>
+              <span class="role-pulse" aria-hidden="true"></span>
+            </p>
+            <p class="lead">
+              Siap membantu berbagai restaurant yang membutuhkan service floor yang rapi, cepat,
+              ramah, dan terbiasa dengan ritme waiter/helper berdasarkan pengalaman kerja sebelumnya
+              di Ayam Loncat.
+            </p>
+            <div class="hero-actions">
+              <a class="button button--primary" href="#skills">
+                <i data-lucide="sparkles"></i>
+                Lihat Skill
+              </a>
+              <a class="button button--ghost" href="cv/ari-anggara-resume.pdf" download>
+                <i data-lucide="download"></i>
+                CV PDF
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-panel reveal reveal--late" aria-label="Ringkasan performa">
+            <div class="candidate-card">
+              <img src="assets/arianggara-profile.png" alt="Foto profil Ari Anggara" />
+              <span>
+                <strong>Ari Anggara</strong>
+                <small>Waiter / Helper Restaurant</small>
+              </span>
+            </div>
+            <div>
+              <span class="metric">Ayam Loncat</span>
+              <small>Pengalaman kerja sebelumnya</small>
+            </div>
+            <div>
+              <span class="metric">Service</span>
+              <small>Waiter, helper, food running</small>
+            </div>
+            <div>
+              <span class="metric">Siap</span>
+              <small>Untuk berbagai perusahaan restaurant</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="snap-section profile-section" id="profile" data-theme="profile">
+        <div class="section-inner split-layout">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Profil</p>
+            <h2>Cepat di depan, rapi di belakang.</h2>
+            <p>
+              Portfolio ini dibuat untuk berbagai perusahaan restaurant yang membutuhkan helper dan
+              waiter dengan karakter kerja service-ready: sigap saat antrean panjang, tetap halus
+              saat tamu butuh perhatian, dan teliti saat area servis mulai padat.
+            </p>
+          </div>
+
+          <div class="service-stack reveal reveal--late">
+            <article class="service-card">
+              <i data-lucide="hand-platter"></i>
+              <h3>Service Floor</h3>
+              <p>Menyapa tamu, mengantar order, menjaga meja, dan membaca kebutuhan kecil sebelum diminta.</p>
+            </article>
+            <article class="service-card">
+              <i data-lucide="chef-hat"></i>
+              <h3>Helper Dapur</h3>
+              <p>Membantu plating, refill stok saji, wrapping, dan menjaga alur pass tetap bersih.</p>
+            </article>
+            <article class="service-card">
+              <i data-lucide="shield-check"></i>
+              <h3>Standar Bersih</h3>
+              <p>Area kerja kering, alat kembali ke tempatnya, dan sampah shift ditutup dengan rapi.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="snap-section skills-section" id="skills" data-theme="skills">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Bento Kapabilitas</p>
+            <h2>Satu orang, banyak titik bantu.</h2>
+          </div>
+
+          <div class="bento-grid">
+            <article class="bento-card bento-card--large reveal">
+              <span class="bento-card__number">01</span>
+              <h3>Jam Ramai</h3>
+              <p>
+                Bergerak dari antrean, meja, pass dapur, sampai area pickup tanpa kehilangan senyum
+                dan prioritas.
+              </p>
+              <div class="mini-bars" aria-hidden="true">
+                <span style="--h: 58%"></span>
+                <span style="--h: 86%"></span>
+                <span style="--h: 72%"></span>
+                <span style="--h: 96%"></span>
+                <span style="--h: 64%"></span>
+              </div>
+            </article>
+            <article class="bento-card reveal">
+              <i data-lucide="clipboard-check"></i>
+              <h3>Order Check</h3>
+              <p>Konfirmasi ulang menu, sambal, minum, dan catatan meja sebelum order bergerak.</p>
+            </article>
+            <article class="bento-card bento-card--accent reveal">
+              <i data-lucide="flame"></i>
+              <h3>Food Running</h3>
+              <p>Hidangan panas sampai meja dengan jalur aman dan susunan piring stabil.</p>
+            </article>
+            <article class="bento-card reveal">
+              <i data-lucide="package-open"></i>
+              <h3>Stok Saji</h3>
+              <p>Refill tisu, saus, sendok, tray, dan area pickup tanpa menunggu kosong.</p>
+            </article>
+            <article class="bento-card reveal">
+              <i data-lucide="smile-plus"></i>
+              <h3>Tamu Repeat</h3>
+              <p>Mengingat kebiasaan tamu reguler dan menjaga komunikasi tetap hangat.</p>
+            </article>
+            <article class="bento-card bento-card--wide reveal">
+              <i data-lucide="sprout"></i>
+              <h3>Sikap Kerja</h3>
+              <p>
+                Mau belajar, cepat menyesuaikan SOP, jujur saat ada kendala, dan ringan membantu
+                tim yang sedang tertahan.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="snap-section rhythm-section" id="rhythm" data-theme="rhythm">
+        <div class="section-inner split-layout split-layout--wide">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Ritme Shift</p>
+            <h2>Alur kerja yang enak diikuti tim.</h2>
+            <p>
+              Bukan cuma cepat, tapi terukur. Tiap bagian shift punya prioritas yang jelas agar area
+              depan, dapur, dan kasir terasa saling bantu.
+            </p>
+          </div>
+
+          <div class="timeline reveal reveal--late" aria-label="Ritme kerja shift">
+            <article>
+              <span>08:00</span>
+              <h3>Prep Area</h3>
+              <p>Lap meja, cek alat saji, refill display, dan siapkan jalur order pertama.</p>
+            </article>
+            <article>
+              <span>12:00</span>
+              <h3>Lunch Rush</h3>
+              <p>Prioritaskan meja aktif, makanan panas, dan komunikasi cepat dengan pass dapur.</p>
+            </article>
+            <article>
+              <span>16:00</span>
+              <h3>Reset Tenang</h3>
+              <p>Rapikan stok, bersihkan spill kecil, dan siapkan tenaga untuk gelombang berikutnya.</p>
+            </article>
+            <article>
+              <span>21:30</span>
+              <h3>Closing</h3>
+              <p>Hitung perlengkapan, buang sampah, bersihkan area, dan beri catatan shift.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="snap-section motion-section" id="motion" data-theme="motion">
+        <div class="section-inner motion-layout">
+          <div class="motion-copy reveal">
+            <p class="eyebrow">Aksi 3D</p>
+            <h2>Gerak service yang terasa sebelum dipanggil.</h2>
+            <p>
+              Energi pelayanan divisualkan lewat tray 3D yang terus bergerak: ringan, stabil, dan
+              selalu kembali ke ritme kerja restaurant.
+            </p>
+          </div>
+
+          <div class="motion-stats reveal reveal--late">
+            <article>
+              <span>4</span>
+              <p>Area bantu utama</p>
+            </article>
+            <article>
+              <span>12</span>
+              <p>Prioritas kecil dipantau tiap shift</p>
+            </article>
+            <article>
+              <span>1</span>
+              <p>Tim, satu tempo</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="snap-section contact-section" id="contact" data-theme="contact">
+        <div class="section-inner contact-layout">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Kontak</p>
+            <h2>Siap bantu service restaurant.</h2>
+            <p>
+              Terbuka untuk peluang waiter, helper, food runner, atau support floor di berbagai
+              perusahaan restaurant yang cocok dengan pengalaman bidang saya.
+            </p>
+          </div>
+
+          <div class="contact-panel reveal reveal--late">
+            <div class="contact-links" aria-label="Kontak utama">
+              <a href="https://wa.me/6287847386701" target="_blank" rel="noreferrer">
+                <i data-lucide="message-circle"></i>
+                <span>
+                  <strong>WhatsApp</strong>
+                  <small>087847386701</small>
+                </span>
+              </a>
+              <a href="mailto:arianggaraar@gmail.com">
+                <i data-lucide="mail"></i>
+                <span>
+                  <strong>Email</strong>
+                  <small>arianggaraar@gmail.com</small>
+                </span>
+              </a>
+              <a href="https://www.facebook.com/share/18ge97qJyh/" target="_blank" rel="noreferrer">
+                <i data-lucide="share-2"></i>
+                <span>
+                  <strong>Facebook</strong>
+                  <small>Ari Anggara</small>
+                </span>
+              </a>
+              <a href="https://www.tiktok.com/@arianggaraar" target="_blank" rel="noreferrer">
+                <i data-lucide="music-2"></i>
+                <span>
+                  <strong>TikTok</strong>
+                  <small>@arianggaraar</small>
+                </span>
+              </a>
+            </div>
+
+            <div class="contact-data" aria-label="Biodata dan alamat">
+              <article>
+                <strong>TTL</strong>
+                <span>Cirebon, 18 September 2001</span>
+              </article>
+              <article>
+                <strong>Usia</strong>
+                <span data-age data-birthdate="2001-09-18">24 Tahun</span>
+              </article>
+              <article class="contact-data__wide">
+                <strong>Alamat</strong>
+                <span>Cirebon, Talun, Cempaka, Blok Sigoleng Wetan, Jl. Raden Cempah 1, POS 45171</span>
+              </article>
+              <article class="contact-data__wide">
+                <strong>Koordinat</strong>
+                <a href="https://www.google.com/maps?q=-6.7431002,108.5114999" target="_blank" rel="noreferrer">
+                  -6.7431002, 108.5114999
+                </a>
+              </article>
+            </div>
+
+            <div class="qr-card">
+              <img src="assets/arianggara-maps-qr.svg" alt="QR lokasi Ari Anggara di Google Maps" />
+              <span>
+                <strong>Scan Lokasi</strong>
+                <small>Google Maps ke alamat Cirebon</small>
+              </span>
+            </div>
+
+            <div class="resume-links" aria-label="Download CV dan resume">
+              <a href="cv/ari-anggara-resume.html" target="_blank">
+                <i data-lucide="file-search"></i>
+                Preview CV
+              </a>
+              <a href="cv/ari-anggara-resume.pdf" download>
+                <i data-lucide="file-down"></i>
+                PDF
+              </a>
+              <a href="cv/ari-anggara-resume.docx" download>
+                <i data-lucide="file-text"></i>
+                Office DOCX
+              </a>
+              <a href="cv/ari-anggara-resume.doc" download>
+                <i data-lucide="file-text"></i>
+                DOC
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

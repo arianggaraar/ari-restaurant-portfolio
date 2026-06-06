@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV Ari Anggara - Waiter & Helper Restaurant</title>
+    <style>
+      :root {
+        --ink: #17211c;
+        --muted: #5d6b62;
+        --line: #d9e1dc;
+        --leaf: #0f7a52;
+        --saffron: #d79512;
+        --paper: #ffffff;
+        --soft: #f4f7f4;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #edf2ee;
+        color: var(--ink);
+        line-height: 1.55;
+      }
+
+      .page {
+        width: min(920px, calc(100% - 28px));
+        margin: 28px auto;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 70px rgba(23, 33, 28, 0.12);
+      }
+
+      .header {
+        display: grid;
+        grid-template-columns: 132px 1fr;
+        gap: 24px;
+        align-items: center;
+        padding: 34px;
+        background: linear-gradient(135deg, #102018, #1d3a2c);
+        color: #fff;
+      }
+
+      .profile-photo {
+        width: 132px;
+        height: 132px;
+        border: 4px solid rgba(246, 189, 58, 0.9);
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 2.35rem;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .role {
+        margin-top: 8px;
+        color: #ffe3a0;
+        font-weight: 700;
+      }
+
+      .summary {
+        margin-top: 16px;
+        max-width: 680px;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        margin-top: 18px;
+        font-size: 0.92rem;
+      }
+
+      .contact span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        padding: 32px 34px 38px;
+      }
+
+      section + section {
+        margin-top: 24px;
+      }
+
+      h2 {
+        padding-bottom: 8px;
+        border-bottom: 2px solid var(--line);
+        color: var(--leaf);
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        margin-top: 16px;
+        font-size: 1.02rem;
+      }
+
+      .meta {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding-left: 20px;
+      }
+
+      li + li {
+        margin-top: 7px;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .tag-list span {
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--soft);
+        color: var(--ink);
+        font-size: 0.9rem;
+        font-weight: 650;
+      }
+
+      .qr-block {
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        gap: 12px;
+        align-items: center;
+        margin-top: 12px;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--soft);
+      }
+
+      .qr-block img {
+        width: 88px;
+        height: 88px;
+      }
+
+      .link-list a {
+        color: var(--leaf);
+        text-decoration: none;
+      }
+
+      .download {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 34px 34px;
+      }
+
+      .download a {
+        display: inline-flex;
+        min-height: 42px;
+        align-items: center;
+        border-radius: 8px;
+        padding: 0 14px;
+        background: var(--leaf);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .download a:nth-child(2) {
+        background: #27362e;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          width: 100%;
+          margin: 0;
+          border: 0;
+          box-shadow: none;
+        }
+
+        .download {
+          display: none;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .header,
+        .content {
+          grid-template-columns: 1fr;
+        }
+
+        .header {
+          text-align: center;
+          justify-items: center;
+        }
+
+        .contact {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <img class="profile-photo" src="../assets/arianggara-profile.png" alt="Foto profil Ari Anggara" />
+        <div>
+          <h1>Ari Anggara</h1>
+          <p class="role">Waiter / Helper Restaurant | Food Runner | Service Floor Support</p>
+          <p class="summary">
+            Kandidat service restaurant dengan pengalaman kerja sebelumnya di Ayam Loncat sebagai
+            waiter/helper. Siap membantu berbagai perusahaan restaurant yang membutuhkan pelayanan
+            ramah, alur meja rapi, food running cepat, dan support operasional yang bersih.
+          </p>
+          <div class="contact">
+            <span>Email: arianggaraar@gmail.com</span>
+            <span>HP/WhatsApp: 087847386701</span>
+            <span>Domisili: Indonesia</span>
+            <span>Target: Restaurant, rumah makan, cafe, dan F&B service</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div>
+          <section>
+            <h2>Profil Singkat</h2>
+            <p>
+              Terbiasa membantu kebutuhan service floor dan operasional harian restaurant. Fokus pada
+              komunikasi yang sopan, respons cepat saat jam ramai, kebersihan area kerja, dan kerja
+              tim yang konsisten dari opening, service, hingga closing.
+            </p>
+          </section>
+
+          <section>
+            <h2>Pengalaman Kerja</h2>
+            <h3>Ayam Loncat - Waiter / Helper</h3>
+            <p class="meta">Pengalaman kerja sebelumnya di bidang restaurant service</p>
+            <ul>
+              <li>Menyambut tamu, membantu kebutuhan meja, dan menjaga pengalaman service tetap ramah.</li>
+              <li>Mengantar pesanan makanan/minuman dari area pickup ke meja dengan aman dan cepat.</li>
+              <li>Membantu helper dapur, plating sederhana, refill alat saji, dan menjaga area pass tetap rapi.</li>
+              <li>Melakukan table reset, membersihkan area makan, dan memastikan perlengkapan service tersedia.</li>
+              <li>Berkoordinasi dengan tim dapur, kasir, dan floor saat antrean atau order sedang padat.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Tujuan Karier</h2>
+            <p>
+              Mencari peluang sebagai waiter, helper, food runner, atau service floor support di
+              berbagai perusahaan restaurant yang membutuhkan kandidat siap kerja, disiplin, dan
+              mudah mengikuti SOP operasional.
+            </p>
+          </section>
+        </div>
+
+        <aside>
+          <section>
+            <h2>Kontak & Biodata</h2>
+            <p class="link-list">
+              Email: <a href="mailto:arianggaraar@gmail.com">arianggaraar@gmail.com</a><br />
+              HP/WhatsApp: <a href="https://wa.me/6287847386701">087847386701</a><br />
+              Facebook: <a href="https://www.facebook.com/share/18ge97qJyh/">Ari Anggara</a><br />
+              TikTok: <a href="https://www.tiktok.com/@arianggaraar">@arianggaraar</a>
+            </p>
+            <p class="meta">TTL: Cirebon, 18 September 2001</p>
+            <p class="meta">Usia: <span data-age data-birthdate="2001-09-18">24 Tahun</span></p>
+            <p class="meta">Alamat: Cirebon, Talun, Cempaka, Blok Sigoleng Wetan, Jl. Raden Cempah 1, POS 45171</p>
+            <p class="meta">Koordinat: -6.7431002, 108.5114999</p>
+            <div class="qr-block">
+              <img src="../assets/arianggara-maps-qr.svg" alt="QR lokasi Ari Anggara" />
+              <p>Scan QR untuk membuka lokasi alamat di Google Maps.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Keahlian Utama</h2>
+            <div class="tag-list">
+              <span>Customer service</span>
+              <span>Food running</span>
+              <span>Table reset</span>
+              <span>Order checking</span>
+              <span>Helper dapur</span>
+              <span>Refill stok saji</span>
+              <span>Kebersihan area</span>
+              <span>Kerja tim</span>
+              <span>Closing shift</span>
+            </div>
+          </section>
+
+          <section>
+            <h2>Kekuatan Kerja</h2>
+            <ul>
+              <li>Cepat beradaptasi dengan ritme restaurant.</li>
+              <li>Teliti menjaga meja, alat saji, dan area pickup.</li>
+              <li>Ramah menghadapi tamu dan komunikatif dengan tim.</li>
+              <li>Siap membantu beberapa titik kerja saat jam ramai.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Ketersediaan</h2>
+            <p>
+              Terbuka untuk peluang kerja di perusahaan restaurant, rumah makan, cafe, dan bisnis F&B
+              service yang sesuai dengan pengalaman waiter/helper.
+            </p>
+          </section>
+        </aside>
+      </div>
+
+      <div class="download">
+        <a href="ari-anggara-resume.pdf" download>Download PDF</a>
+        <a href="ari-anggara-resume.docx" download>Download Office DOCX</a>
+        <a href="ari-anggara-resume.doc" download>Download DOC</a>
+      </div>
+    </main>
+    <script>
+      const ageTarget = document.querySelector("[data-age][data-birthdate]");
+      if (ageTarget) {
+        const birthDate = new Date(`${ageTarget.dataset.birthdate}T00:00:00`);
+        const today = new Date();
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const birthdayPassed =
+          today.getMonth() > birthDate.getMonth() ||
+          (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+        if (!birthdayPassed) age -= 1;
+        ageTarget.textContent = `${age} Tahun`;
+      }
+    </script>
+  </body>
+</html>
