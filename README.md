@@ -2,6 +2,14 @@
 
 Static portfolio website untuk Ari Anggara, waiter/helper restaurant dengan pengalaman kerja sebelumnya di Ayam Loncat.
 
+## Preview Publik
+
+Website portfolio bisa dibuka di:
+
+```text
+https://arianggaraar.github.io/ari-restaurant-portfolio/
+```
+
 ## Preview Lokal
 
 Jalankan server statis dari root project:
@@ -36,15 +44,4 @@ http://127.0.0.1:5173
 
 ## GitHub
 
-Project ini siap dipush ke GitHub Pages sebagai static site. Setelah remote repository dibuat:
-
-```bash
-git init
-git config user.email "arianggaraar@gmail.com"
-git config user.name "Ari Anggara"
-git add .
-git commit -m "Build restaurant service portfolio"
-git branch -M main
-git remote add origin <repository-url>
-git push -u origin main
-```
+Repository: `https://github.com/arianggaraar/ari-restaurant-portfolio`
